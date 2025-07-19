@@ -13,7 +13,7 @@ export const verifyPeriode = async (
 ) => {
    try {
       const { periode_jalur_id }: { periode_jalur_id: number } = req.body;
-      const url = `${env.PERIODE_SERVICE_URL}/jadwal/${periode_jalur_id}`;
+      const url = `${env.PERIODE_SERVICE_URL}/periode/jadwal/${periode_jalur_id}`;
       const token = generateAccessToken({ userId: 0, role: "adminDisdik" });
       const response = await axios.get(url, {
          headers: {
